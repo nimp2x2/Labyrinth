@@ -1,0 +1,5 @@
+[6] A window was succesfully created
+[6] DirectX was successfully created
+[6] Using default adapter
+[6] DirectX Device was successfully created
+[6] Entering IWindows::Run()

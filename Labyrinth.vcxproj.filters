@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{b3ce564e-50e5-4428-8239-31ca3b8eee0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\2D">
+      <UniqueIdentifier>{e5f24fe0-5704-4668-85b8-d7957faa249a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\2D\IAnim">
+      <UniqueIdentifier>{9e4f8a55-fb54-4636-aed0-42e37b5a54f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\2D\IGUI">
+      <UniqueIdentifier>{55a10abf-b435-410e-800c-89e6ccad4056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\2D\ISceneManager2D">
+      <UniqueIdentifier>{4a899d58-a558-486c-8729-7fa206bfe31b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\2D\ISprite">
+      <UniqueIdentifier>{7638b8db-dd66-4329-953b-aa471064a40b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3D">
+      <UniqueIdentifier>{eaf6548d-6887-4afd-8cc2-ee64a18820a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3D\IMesh">
+      <UniqueIdentifier>{dff717cf-efc0-4ef7-be17-8a8085621c81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3D\ICamera">
+      <UniqueIdentifier>{7429f1c9-c531-4e82-bebb-5c7648da7980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3D\ISceneManager">
+      <UniqueIdentifier>{e0901917-4495-47a8-b8a8-5f9a9a306284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\DefinitionsAndInclude">
+      <UniqueIdentifier>{f23e9f75-51b5-4285-bcd6-d3197a06df27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\IDevice9">
+      <UniqueIdentifier>{8f18edfd-818c-4eda-96fa-fa7d80e20d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ILogger">
+      <UniqueIdentifier>{6cc6270f-e4fd-49d2-82be-7c85c7d62e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\IInput">
+      <UniqueIdentifier>{729ad8a1-1534-4cf6-ae4a-3eeb1dc62689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\IResourceManager">
+      <UniqueIdentifier>{32a76598-1e52-4e58-8320-6e45e20c5662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Resource">
+      <UniqueIdentifier>{673d4b59-9cf9-4001-8d00-13fa07cf9d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\IWindows">
+      <UniqueIdentifier>{043716dd-dad3-4946-9d72-1d3b6b2f9599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coursework">
+      <UniqueIdentifier>{3cdf6738-e730-4930-be51-5dbc596c98ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coursework\Menu">
+      <UniqueIdentifier>{8cccd8ad-e28b-4c8e-b48d-4b61deed3260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coursework\Game">
+      <UniqueIdentifier>{e756e834-abe5-4f20-9d7d-df5e0983d577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coursework\LabBuilder">
+      <UniqueIdentifier>{08d5b6a9-f231-4713-acd4-069e668b1394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coursework\MainGame">
+      <UniqueIdentifier>{3c256ea3-430e-4bd5-ad7d-8fc8d41e5b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Coursework\Wave">
+      <UniqueIdentifier>{c05d9fce-058d-4d70-81f9-a2f526685abc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\2D\IFont">
+      <UniqueIdentifier>{613eb3ee-74c2-4012-9bf6-7cc29b4da66f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DefinitionsAndIncludes.cpp">
+      <Filter>Engine\DefinitionsAndInclude</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineHeaders.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="IAnim.cpp">
+      <Filter>Engine\2D\IAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="ICamera.cpp">
+      <Filter>Engine\3D\ICamera</Filter>
+    </ClCompile>
+    <ClCompile Include="IDevice9.cpp">
+      <Filter>Engine\IDevice9</Filter>
+    </ClCompile>
+    <ClCompile Include="IFont.cpp">
+      <Filter>Engine\2D\IFont</Filter>
+    </ClCompile>
+    <ClCompile Include="IGUI.cpp">
+      <Filter>Engine\2D\IGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IInput.cpp">
+      <Filter>Engine\IInput</Filter>
+    </ClCompile>
+    <ClCompile Include="ILogger.cpp">
+      <Filter>Engine\ILogger</Filter>
+    </ClCompile>
+    <ClCompile Include="IMesh.cpp">
+      <Filter>Engine\3D\IMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="IResourceManager.cpp">
+      <Filter>Engine\IResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ISceneManager2D.cpp">
+      <Filter>Engine\2D\ISceneManager2D</Filter>
+    </ClCompile>
+    <ClCompile Include="ISprite.cpp">
+      <Filter>Engine\2D\ISprite</Filter>
+    </ClCompile>
+    <ClCompile Include="ISceneManager.cpp">
+      <Filter>Engine\3D\ISceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="IWindows.cpp">
+      <Filter>Engine\IWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Coursework\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Coursework\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="LabBuilder.cpp">
+      <Filter>Coursework\LabBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>Coursework\MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Coursework\Wave</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DefinitionsAndIncludes.h">
+      <Filter>Engine\DefinitionsAndInclude</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineHeaders.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IAnim.h">
+      <Filter>Engine\2D\IAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="ICamera.h">
+      <Filter>Engine\3D\ICamera</Filter>
+    </ClInclude>
+    <ClInclude Include="IDevice9.h">
+      <Filter>Engine\IDevice9</Filter>
+    </ClInclude>
+    <ClInclude Include="IFont.h">
+      <Filter>Engine\2D\IFont</Filter>
+    </ClInclude>
+    <ClInclude Include="IGUI.h">
+      <Filter>Engine\2D\IGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IInput.h">
+      <Filter>Engine\IInput</Filter>
+    </ClInclude>
+    <ClInclude Include="ILogger.h">
+      <Filter>Engine\ILogger</Filter>
+    </ClInclude>
+    <ClInclude Include="IMesh.h">
+      <Filter>Engine\3D\IMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="IResourceManager.h">
+      <Filter>Engine\IResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ISceneManager2D.h">
+      <Filter>Engine\2D\ISceneManager2D</Filter>
+    </ClInclude>
+    <ClInclude Include="ISprite.h">
+      <Filter>Engine\2D\ISprite</Filter>
+    </ClInclude>
+    <ClInclude Include="ISceneManager.h">
+      <Filter>Engine\3D\ISceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindows.h">
+      <Filter>Engine\IWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Coursework\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Coursework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="LabBuilder.h">
+      <Filter>Coursework\LabBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>Coursework\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Coursework\Wave</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
