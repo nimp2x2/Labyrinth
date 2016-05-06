@@ -1,4 +1,5 @@
 #include "EngineHeaders.h"
+#include <malloc.h>
 
 EngineHeaders engineHeaders;
 
@@ -17,10 +18,19 @@ EngineHeaders::~EngineHeaders()
 	SQUALL_Sample_UnloadAll();
 	SQUALL_Free();
 	SAFE_RELEASE(this->font);
-	SAFE_RELEASE(this->camera);
+	if (this->camera) {
+		this->camera->~ICamera();
+		_aligned_free(this->camera);
+	}
 	SAFE_RELEASE(this->resourceManager);
-	SAFE_RELEASE(this->scene);
-	SAFE_RELEASE(this->scene2d);
+	if (this->scene) {
+		this->scene->~ISceneManager();
+		_aligned_free(this->scene);
+	}
+	if (this->scene2d) {
+		this->scene2d->~ISceneManager2D();
+		_aligned_free(this->scene2d);
+	}
 	SAFE_RELEASE(this->device);
 	SAFE_RELEASE(this->input);
 	SAFE_RELEASE(this->window);
@@ -78,7 +88,9 @@ bool EngineHeaders::Init(HINSTANCE hInst)
 	this->window->LogicFunction = EngineHeaders::Logic;
 	this->window->RenderFunction = EngineHeaders::Render;
 	
-	this->scene2d = new ISceneManager2D(this->device->GetDevice());
+	void * ptr = _aligned_malloc(sizeof(ISceneManager2D), 16);
+	this->scene2d = new (ptr) ISceneManager2D(this->device->GetDevice());
+
 	if(FAILED(this->scene2d->CreateLinePrimitivesVertexBuffer(2048)))
 		return false;
 	if(FAILED(this->scene2d->CreatePointPrimitivesVertexBuffer(2048)))
@@ -112,12 +124,17 @@ bool EngineHeaders::Init(HINSTANCE hInst)
 	font->SetScale(1.0f);
 	font->SetTextureAtlas(this->resourceManager->GetTexture(L"Data/Textures/arial32pt.dds"));
 
-	this->scene = new ISceneManager(this->device->GetDevice());
+	ptr = _aligned_malloc(sizeof(ISceneManager), 16);
+	this->scene = new (ptr) ISceneManager(this->device->GetDevice());
+
 	if(FAILED(this->scene->CreateStaticSimpleIndexBuffer(8192*2)))
 		return false;
 	if(FAILED(this->scene->CreateStaticSimpleVertexBuffer(8192*2)))
 		return false;
-	this->camera = new ICamera();
+
+	ptr = _aligned_malloc(sizeof(ICamera), 16);
+	this->camera = new (ptr) ICamera();
+
 	this->camera->SetEyeVector(D3DXVECTOR3(0.0f, 20.0f, 0.0f));
 	camera->SetProjectionMatrix(D3DX_PI / 4, currentWidth / currentHeight, 0.1f, 1000.0f);
 	this->scene->SetProjMatrix(this->camera->GetProjMatrix());
