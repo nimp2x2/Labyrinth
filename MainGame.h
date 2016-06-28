@@ -41,7 +41,7 @@ class MainGame
 	ISprite *rightArrow;
 	ISprite *undiscovered;
 	DWORD currentExit;
-	//3d stuff
+	//3d cam stuff
 	bool mouseClip;
 	int camx;
 	int camOldx;
